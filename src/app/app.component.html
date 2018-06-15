@@ -1,4 +1,11 @@
+<div class="forminput">
+    <input type="text" [(ngModel)]="cityName">
+    <button class="btn btn-success" (click)="citypass()">submit</button>
+</div>
 <div class="container">
   <app-header [currentloc]="location" [currentday]="day" [currentstatus]="status"></app-header>
-  <app-cloudicon></app-cloudicon> 
+  <app-cloudicon></app-cloudicon>
+  <app-details></app-details>
+  <app-graph></app-graph>
+  <app-futureicons></app-futureicons>
 </div>

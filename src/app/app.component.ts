@@ -6,7 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  location:string = "Indira Nagar, Gachibowli, Hyderabad, Telangana";
-  day="Friday";
-  status="Partly Cloudy";
+  location = 'Indira Nagar, Gachibowli, Hyderabad, Telangana';
+  day = 'Friday';
+  status = 'Partly Cloudy';
+  cityName = '';
+  citypass( ) {
+    console.log(this.cityName);
+  }
 }
