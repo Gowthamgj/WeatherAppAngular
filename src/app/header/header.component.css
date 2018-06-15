@@ -1,0 +1,25 @@
+#location{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    color: #878787;
+    font-weight: 100;
+    font-size: 24px;
+    font-family: Arial,  sans-serif;
+    line-height: 28.8px;
+}
+#day{
+    margin-top: 0px;
+    margin-left: 20px;
+    color: #878787;
+    font-weight: 100;
+    font-size: 16px;
+    font-family: Arial,  sans-serif;
+    line-height: 19.2px;
+}
+#status{
+    font-size: 13px;
+    line-height: 15.6px;
+    color: #878787;
+    margin-left: 20px;    
+}
