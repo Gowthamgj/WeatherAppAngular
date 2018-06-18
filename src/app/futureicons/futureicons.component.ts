@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { WeatherFetchService } from './../services/weather-fetch.service';
+import { Component, OnInit ,Input} from '@angular/core';
 
 @Component({
   selector: 'app-futureicons',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./futureicons.component.css']
 })
 export class FutureiconsComponent implements OnInit {
-
-  constructor() { }
+  @Input() dayTileInfo;
+  constructor(private service:WeatherFetchService) { }
 
   ngOnInit() {
   }
-
+  updategraph(){
+    console.log("update")
+    console.log(this.dayTileInfo.dayNum)
+    this.service.updateGraphDetails(this.dayTileInfo.dayNum);
+    this.service.updateSummary(this.dayTileInfo.dayNum);
+  }
 }

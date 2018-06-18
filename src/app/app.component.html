@@ -3,9 +3,11 @@
     <button class="btn btn-success" (click)="citypass()">submit</button>
 </div>
 <div class="container">
-  <app-header [currentloc]="location" [currentday]="day" [currentstatus]="status"></app-header>
-  <app-cloudicon></app-cloudicon>
-  <app-details></app-details>
-  <app-graph></app-graph>
-  <app-futureicons></app-futureicons>
+  <app-header [summary]="service.summary" [currentday]="service.summary.day" [currentstatus]="status"></app-header>
+  <app-cloudicon [temp]="service.temperature" [iconimg]="service.presdet"></app-cloudicon>
+  <app-details [details]="service.presdet"></app-details>
+  <app-graph [date]="service.datelist" [temp]="service.templist" [cityName]="service.summary.name"></app-graph>
+  <div class="row">
+  <app-futureicons *ngFor="let dayInfo of service.dayTileList" [dayTileInfo]="dayInfo"></app-futureicons>
+  </div>
 </div>

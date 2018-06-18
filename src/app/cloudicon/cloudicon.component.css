@@ -5,6 +5,8 @@
 }
 image{
     margin-top:0%;
+    height: 48px;
+    widows: 48px;
 }
 .degval{
     font-size: 40px;

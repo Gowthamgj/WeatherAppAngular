@@ -3,12 +3,10 @@
     border: 1px solid #E9E9E9;
     width: 60px;
 }
-.iconfirst{
-    margin-left:20px;
+
+.icons{
+    margin:10px;
 }
 image{
     margin-left: 0%
-}
-.day{
-    text-align: center;
 }
