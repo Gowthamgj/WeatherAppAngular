@@ -4,7 +4,7 @@
 </div>
 <div class="container">
   <app-header [summary]="service.summary" [currentday]="service.summary.day" [currentstatus]="status"></app-header>
-  <app-cloudicon [temp]="service.temperature" [iconimg]="service.presdet"></app-cloudicon>
+  <app-cloudicon [temp]="service.temperature" [farenheit]="service.farenheit" [iconimg]="service.presdet"></app-cloudicon>
   <app-details [details]="service.presdet"></app-details>
   <app-graph [date]="service.datelist" [temp]="service.templist" [cityName]="service.summary.name"></app-graph>
   <div class="row">

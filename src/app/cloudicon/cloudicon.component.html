@@ -1,4 +1,8 @@
 <div class="imagepart">
   <img src={{iconimg.icon}}>
-  <span class="degval">{{temp}}<sup>.F|.C</sup></span>
+  
+  <span *ngIf="f" class="degval" >{{farenheit}}<sup><span (click)="faren()">oF</span>|<span (click)="celci()">oC</span></sup></span>    
+  
+  <span *ngIf="c" class="degval" >{{temp}}<sup><span (click)="faren()">oF</span>|<span (click)="celci()">oC</span></sup></span>        
+ 
 </div>

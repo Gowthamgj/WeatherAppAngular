@@ -1,4 +1,4 @@
-import { Component, OnInit ,Input } from '@angular/core';
+import { Component , Input } from '@angular/core';
 import { Chart } from 'angular-highcharts';
 import { OnChanges } from '@angular/core/src/metadata/lifecycle_hooks';
 @Component({
@@ -11,15 +11,16 @@ export class GraphComponent implements OnChanges {
   @Input('temp') secondlist;
   chart;
   @Input() cityName;
-  ngOnChanges(){
+
+  ngOnChanges() {
+    console.log("changing takes place");
     this.chart = new Chart({
       chart: {
-        type: 'area'  
+        type: 'area'
       },
       title: {
         text: 'temperature chart'
       },
-      
       xAxis: {
         categories: this.firstlist
       },
@@ -30,7 +31,6 @@ export class GraphComponent implements OnChanges {
       },
       plotOptions: {
         area: {
-          
           dataLabels: {
             enabled: true
           },
@@ -43,8 +43,4 @@ export class GraphComponent implements OnChanges {
        }]
     });
   }
-  
- 
-  // add point to chart serie 
-
 }
